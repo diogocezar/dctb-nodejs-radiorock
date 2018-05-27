@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dctb-radiorock",
+  "private_key_id": "e133403e3804e6998e1af97ac92ea02afe829c12",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCi8JbY0X6aYIjj\nJzBSHRy59xP0x08as9+DRgNcVIdXjKrwrGU9sbBVkQ+FFPl0uRPspBe6EcQ2VTYr\nbyY65NFIq0D6vdgMxd4A/xhpLVyLz8pjyMDx0gZExax3kiQhe+0n60pgnnMEEZvV\nFnfSTFmWfrWnzmwuKG1tlzFzLRvbNSclns2bk1y+mY1RCqvzKHCn+1nFhjHznrlj\ndsCpO5ko//xEMhES1lm1J4UFLULQJmaL5EY6e935AuJbR36iEYN6pwE9CoyN0Cjr\nOfvWwtgusLk9ONydM0hGTYOoh5CIXsiiepvHH9XiS27VaU64N5TKLBagllhLgOUl\n/JkibXi5AgMBAAECggEAATqsNXNSVfsBQI8JhkhB8NIBJiLHlGP9Y6tVJMH4Fpwx\nDe+/AJNYL5ndWOh3mUtsIw552PJMkKLD7dmNm3qIBnK3fF/1dhZoCyN7HUM1irh4\nLMu7tbDn6zNMKC322wNpHpjGNURjI1ZR3qGn9b/HTTzxEeFn+R34KJBJ1AMBgTEH\nLKJguDOszQLi0WwB27h+KRLJ9icyG4+3gvrQupjb0pZ1fTR97oHF0rMmwqje5bXX\nk3evkVK5LabfZm1xXf3ogY6RTGUvGymJpMntbsJTytZG4EIenQuHICXDZnwZcuCa\na2CzY8HG14Gc9pk1NEP6IXj61ClXfHufWFxaJRAMAQKBgQDXMCKhVvGwX3ypzwm/\nMgTI019Ir9YfQHq4sZ/cYGsuoQ19DKpm8/S1/QfgxZp8KQ79r+tUf0vyRYADl4t1\nHNNjCcrlRTRCdcJwI0bKveGfHPlw/tT4KntCNiiMCLX4yTd9JUIVCoZm2f/F98Mz\n2SouvJMwafmNEiiKNWYAz/wvMQKBgQDB169AeQkg1OtEsdXNacKT9uoHe9Hn2SJp\nV/y9B17ngPdtlB9PF5QBgcSUz+tyDdqtxfxX8K42Ee5xJXkJZiK8eMu32E/rd9Ll\njpe8wS9vj2bceLJahlJyWQEpnmu5amok+Yiy0sdPtt54tFfqeImsIy8ct1pIn0ua\nU7+M0bjQCQKBgE7cszRRus2akQNifv31BM/ctyTaXCyj4tXhMub+5wj1uQ3FIIYO\njfZMPyDfCljKa1YJrMMQy/KECgBG/7Lx136KTjNsA1T/9zxFkWIn6JH5emkw2zf/\nyaBgXMfFQXtlstJIX0l6y/rRle0legJ8afsq3P53OB+9MeJE45cUoiVhAoGAbfsy\nNCJ4S2iDFDbSV/nprIorvpNCRYmtPJfvjlDgR/mkaUfhe76k+zXlk4lkzRGPQYlT\n45FrRsJlx0y7n9mTW9wtueHBdphF0HlXHoF9qI50jiLtDu+nV7moLzTzagA2uUPb\ni5qL+26GS3YHa8F4W3KbCG//ibTX8HgT9pIHigECgYAhIlOA7uqYNy+bVg5aOLFu\nZcin9Q1bvtqsu/+Y7i4u3s7QTGLKnBGaQ0avhKPMIOS0G1tzmGgg8xx3/lqhHEer\n1AIjP5qBZWQ8jENsIizZGDYTfJNGb7q5eJbHSfwBJVegkHafF1MbtgupMh9cbqmM\nkrwFOq5FtVnvFIcIuuNgBw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-tpu1t@dctb-radiorock.iam.gserviceaccount.com",
+  "client_id": "100114880950662291618",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-tpu1t%40dctb-radiorock.iam.gserviceaccount.com"
+}
