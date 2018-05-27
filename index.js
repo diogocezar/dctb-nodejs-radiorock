@@ -54,6 +54,7 @@ class RadioRock {
         const singer = music.singer
         const song   = music.song
         return {
+            'date'   : new Date().toLocaleString(),
             'singer' : singer,
             'song'   : song
         }
@@ -61,7 +62,7 @@ class RadioRock {
     writeFireBase(result){
         console.log('Gravação no FireBase.')
         const obj = {}
-        obj[new Date().toLocaleString()] = result
+        obj[(new Date().getTime()*-1)] = result
         this.checkIfExistsFb(result, obj);
     }
     checkIfExistsFb(result, obj){
@@ -98,7 +99,7 @@ class RadioRock {
                 console.log('\x1b[32m', '')
                 console.log(`[FILE] Nova música encontrada: ${result.singer} - ${result.song}`)
                 console.log('\x1b[0m')
-                oldContent[new Date().toLocaleString()] = result
+                oldContent[(new Date().getTime() * -1)] = result
                 fs.writeFile(this.fileName, JSON.stringify(oldContent), (err) => {
                     if (err) { return console.log(err) }
                 })

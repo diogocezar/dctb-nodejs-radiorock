@@ -25,9 +25,9 @@
                 const dataBase = snapshot.val()
                 if(dataBase != null){
                     let content = document.querySelector('#content');
-                    content.innetHTML = ''
+                    content.innerHTML = ""
                     for (let k in dataBase){
-                        content.innerHTML += `${k} | ${dataBase[k].singer} - ${dataBase[k].song}<br/>`
+                        content.innerHTML += `${dataBase[k].date} | ${dataBase[k].singer} - ${dataBase[k].song}<br/>`
                     }
                 }
             })
