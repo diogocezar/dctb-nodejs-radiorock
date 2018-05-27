@@ -8,6 +8,7 @@ class RadioRock {
         this.dbUrl    = 'https://dctb-radiorock.firebaseio.com'
         this.keyFile  = './key.json'
         this.fileName = './data.json'
+        this.root     = 'radio-rock'
         this.file     = require(this.fileName)
         this.account  = require(this.keyFile)
         this.data     = ''
@@ -53,10 +54,12 @@ class RadioRock {
         const music  = json.musicas.tocando
         const singer = music.singer
         const song   = music.song
+        const date   = new Date().toLocaleString()
         return {
-            'date'   : new Date().toLocaleString(),
+            'date'   : date,
             'singer' : singer,
-            'song'   : song
+            'song'   : song,
+            'found'  : [date]
         }
     }
     writeFireBase(result){
@@ -67,17 +70,33 @@ class RadioRock {
     }
     checkIfExistsFb(result, obj){
         const db  = fb.database();
-        const ref = db.ref("/radio-rock");
-        ref.on("value", (snapshot) => {
+        const ref = db.ref("/" + this.root);
+        ref.once("value", (snapshot) => {
             const dataBase = snapshot.val();
             let save       = true;
             for (let k in dataBase) {
                 if (dataBase[k].singer == result.singer && dataBase[k].song == result.song){
                     if(save == true){
+                        save = false
                         console.log('\x1b[33m', '')
                         console.log(`[FIREBASE] Música já encontrada: ${result.singer} - ${result.song}`)
                         console.log('\x1b[0m')
-                        save = false
+                        if (dataBase[k].found != undefined){
+                            let dateNow = new Date().toLocaleString()
+                            let dateSaved = dataBase[k].found[dataBase[k].found.length - 1]
+                            if(dateSaved != undefined){
+                                let dateCompNow = new Date(dateNow)
+                                let dateCompSaved = new Date(dateSaved)
+                                let diffMs = (dateCompSaved - dateCompNow) * -1;
+                                let diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000);
+                                if(diffMins > 10){
+                                    let updateObj = {};
+                                    updateObj['found'] = dataBase[k].found || []
+                                    updateObj['found'].push(new Date().toLocaleString())
+                                    db.ref("/" + this.root + "/" + k).update(updateObj)
+                                }
+                            }
+                        }
                     }
                 }
             }
