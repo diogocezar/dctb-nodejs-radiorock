@@ -1,36 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
     <head>
-        <meta charset="utf-8">
-        <title>Músicas da Radio Rock</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>🎵 Músicas da Rádio Rock 🎵</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     </head>
     <body>
-        <h1>Lista das Músicas Tocadas na Radio Rock FM 89,1</h1>
-        <div id="content"></div>
+        <h1>Músicas da Rádio Rock</h1>
+        <p>Olá, bem vindo ao sistema de busca pelas músicas da Rádio Rock 89,1.</p>
+        <p>Abaixo está a lista de músicas que foram encontrados por nosso sistema.</p>
+        <form class="search-form">
+            <input type="text" class="search" placeholder="Data, Banda ou Música">
+            <ul class="suggestions">
+                <li>Filtre utilizando uma Data ou Banda</li>
+                <li>ou Música</li>
+            </ul>
+        </form>
+        <small><p>Veja o projeto no <a href="https://github.com/diogocezar/dctb-nodejs-radiorock" target="_blank">GitHub</a></p></small>
         <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-        <script>
-            const config = {
-                apiKey: "AIzaSyCIaqXU3T-vPozdG4BjR-LXfP-ZjL54kRw",
-                authDomain: "dctb-radiorock.firebaseapp.com",
-                databaseURL: "https://dctb-radiorock.firebaseio.com",
-                projectId: "dctb-radiorock",
-                messagingSenderId: "957919561974"
-            };
-            firebase.initializeApp(config);
-            const db = firebase.database();
-            const ref = db.ref('/radio-rock')
-            ref.on('value', function(snapshot){
-                const dataBase = snapshot.val()
-                if(dataBase != null){
-                    let content = document.querySelector('#content');
-                    content.innerHTML = ""
-                    for (let k in dataBase){
-                        content.innerHTML += `${dataBase[k].date} | ${dataBase[k].singer} - ${dataBase[k].song}<br/>`
-                    }
-                }
-            })
-        </script>
+        <script src="./js/app.js"></script>
     </body>
 </html>

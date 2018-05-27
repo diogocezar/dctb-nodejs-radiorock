@@ -73,10 +73,12 @@ class RadioRock {
             let save       = true;
             for (let k in dataBase) {
                 if (dataBase[k].singer == result.singer && dataBase[k].song == result.song){
-                    console.log('\x1b[33m', '')
-                    console.log(`[FIREBASE] Música já encontrada: ${result.singer} - ${result.song}`)
-                    console.log('\x1b[0m')
-                    save = false
+                    if(save == true){
+                        console.log('\x1b[33m', '')
+                        console.log(`[FIREBASE] Música já encontrada: ${result.singer} - ${result.song}`)
+                        console.log('\x1b[0m')
+                        save = false
+                    }
                 }
             }
             if(save){
