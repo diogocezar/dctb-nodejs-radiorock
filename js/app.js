@@ -72,6 +72,7 @@ const App = {
     getMusics: () => {
         App.ref.on('value', function (snapshot){
             App.musics = App.snapshotToArray(snapshot)
+            App.musics.reverse();
             App.displayMatches();
         })
     },
