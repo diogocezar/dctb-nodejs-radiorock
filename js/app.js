@@ -70,7 +70,7 @@ const App = {
         return returnArr;
     },
     getMusics: () => {
-        App.ref.on('value', function (snapshot){
+        App.ref.limitToLast(1000).on('value', function (snapshot){
             App.musics = App.snapshotToArray(snapshot)
             App.musics.reverse();
             App.displayMatches();
