@@ -6,11 +6,13 @@ const App = {
         projectId         : "dctb-radiorock",
         messagingSenderId : "957919561974"
     },
-    db : null,
-    ref : null,
-    musics : [],
-    searchInput : null,
-    suggestions : null,
+    db           : null,
+    ref          : null,
+    musics       : [],
+    searchInput  : null,
+    suggestions  : null,
+    replaceCount : null,
+    count        : null,
     init: () => {
         firebase.initializeApp(App.config);
         App.db  = firebase.database()
@@ -21,6 +23,7 @@ const App = {
     setEvents: () => {
         App.searchInput = document.querySelector('.search')
         App.suggestions = document.querySelector('.suggestions')
+        App.replaceCount = document.querySelector('.replace-count')
         App.searchInput.addEventListener('change', App.displayMatches)
         App.searchInput.addEventListener('keyup', App.displayMatches)
     },
@@ -72,10 +75,14 @@ const App = {
     getMusics: () => {
         App.ref.limitToLast(1000).on('value', function (snapshot){
             App.musics = App.snapshotToArray(snapshot)
-            App.musics.reverse();
-            App.displayMatches();
+            App.musics.reverse()
+            App.count = App.musics.length
+            App.displayMatches()
+            App.updateCount()
         })
     },
-
+    updateCount: () => {
+        App.replaceCount.innerHTML = App.count
+    }
 }
 App.init();

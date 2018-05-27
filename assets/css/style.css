@@ -24,9 +24,10 @@ a{
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     color: #f4f4f4;
+    font-weight: bold;
 }
 
 p{
@@ -98,6 +99,11 @@ span.date {
 
 .hl {
     background: #ffc600;
+}
+
+.replace-count{
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 @media (max-width: 900px) {
