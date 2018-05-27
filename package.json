@@ -1,0 +1,23 @@
+{
+  "name": "dctb-nodejs-radiorock",
+  "version": "1.0.0",
+  "description": "Olá, este é um simples robozinho feito em NodeJS para salvar a lista de todas as músicas que são tocadas na programação da Rádio Rock.",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^5.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogocezar/dctb-nodejs-radiorock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diogocezar/dctb-nodejs-radiorock/issues"
+  },
+  "homepage": "https://github.com/diogocezar/dctb-nodejs-radiorock#readme"
+}
