@@ -54,10 +54,18 @@ const App = {
                 data.singerName = item.singer;
                 data.dateName   = item.date;
             }
+            data.line1 = `${data.songName} - ${data.singerName}`
+            data.line2 = `${data.dateName}`
+            if(item.found != undefined){
+                data.count = item.found.lenght;
+                if (data.count > 1) {
+                    data.line1 = `(${data.count})` + data.line1;
+                }
+            }
             return `
             <li>
-                <span class="name">${data.songName} - ${data.singerName}</span>
-                <span class="date">${data.dateName}</span>
+                <span class="name">${data.line1}</span>
+                <span class="date">${data.line2}</span>
             </li>
             `
         }).join('')
