@@ -57,9 +57,9 @@ const App = {
             data.line1 = `${data.songName} - ${data.singerName}`
             data.line2 = `${data.dateName}`
             if(item.found != undefined){
-                data.count = item.found.lenght;
+                data.count = item.found.length
                 if (data.count > 1) {
-                    data.line1 = `(${data.count})` + data.line1;
+                    data.line1 = `(${data.count}) ` + data.line1
                 }
             }
             return `
