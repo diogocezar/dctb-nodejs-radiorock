@@ -71,7 +71,6 @@ class RadioRock {
         const db  = fb.database();
         const ref = db.ref("/" + this.root);
         ref.once("value", (snapshot) => {
-            console.log('passou')
             const dataBase = snapshot.val();
             let save       = true;
             for (let k in dataBase) {
