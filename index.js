@@ -8,7 +8,7 @@ class RadioRock {
         this.dbUrl    = 'https://dctb-radiorock.firebaseio.com'
         this.keyFile  = './key.json'
         this.fileName = './data.json'
-        this.root     = 'radio-rock-demo'
+        this.root     = 'radio-rock'
         this.file     = require(this.fileName)
         this.account  = require(this.keyFile)
         this.data     = ''
