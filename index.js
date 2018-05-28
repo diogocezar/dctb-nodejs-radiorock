@@ -8,16 +8,15 @@ class RadioRock {
         this.dbUrl    = 'https://dctb-radiorock.firebaseio.com'
         this.keyFile  = './key.json'
         this.fileName = './data.json'
-        this.root     = 'radio-rock'
+        this.root     = 'radio-rock-demo'
         this.file     = require(this.fileName)
         this.account  = require(this.keyFile)
         this.data     = ''
-        this.seconds  = 60
+        this.seconds  = 5
         this.configureFirebase()
         this.loop()
     }
     loop(){
-        this.getData()
         setTimeout(() => {
             this.getData()
             this.loop()
@@ -72,6 +71,7 @@ class RadioRock {
         const db  = fb.database();
         const ref = db.ref("/" + this.root);
         ref.once("value", (snapshot) => {
+            console.log('passou')
             const dataBase = snapshot.val();
             let save       = true;
             for (let k in dataBase) {
