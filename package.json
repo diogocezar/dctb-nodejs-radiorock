@@ -4,7 +4,8 @@
   "description": "Olá, este é um simples robozinho feito em NodeJS para salvar a lista de todas as músicas que são tocadas na programação da Rádio Rock.",
   "main": "index.js",
   "dependencies": {
-    "firebase-admin": "^5.12.1"
+    "firebase-admin": "^5.12.1",
+    "forever": "^0.15.3"
   },
   "devDependencies": {},
   "scripts": {
