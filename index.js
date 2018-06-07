@@ -1,5 +1,5 @@
 const https   = require('https')
-const fs      = require('fs')
+//const fs      = require('fs')
 const fb      = require("firebase-admin");
 
 class RadioRock {
@@ -7,13 +7,14 @@ class RadioRock {
         this.url      = 'https://players.gc2.com.br/cron/89fm/results2.json'
         this.dbUrl    = 'https://dctb-radiorock.firebaseio.com'
         this.keyFile  = './key.json'
-        this.fileName = './data.json'
+        //this.fileName = './data.json'
         this.root     = 'radio-rock'
-        this.file     = require(this.fileName)
+        //this.file     = require(this.fileName)
         this.account  = require(this.keyFile)
         this.data     = ''
         this.seconds  = 100
         this.configureFirebase()
+        this.getData()
         this.loop()
     }
     loop(){
@@ -105,7 +106,7 @@ class RadioRock {
                 console.log('\x1b[0m')
                 ref.update(obj)
             }
-                
+            console.log('Aguardando...')
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
