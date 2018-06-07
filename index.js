@@ -12,7 +12,7 @@ class RadioRock {
         this.file     = require(this.fileName)
         this.account  = require(this.keyFile)
         this.data     = ''
-        this.seconds  = 5
+        this.seconds  = 100
         this.configureFirebase()
         this.loop()
     }
