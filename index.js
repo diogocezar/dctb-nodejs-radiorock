@@ -40,7 +40,7 @@ class RadioRock {
             res.on('end', ()       => { 
                 console.log('JSON retornado.')
                 const json = this.getJsonResult(this.data)
-                this.writeFile(json)
+                //this.writeFile(json)
                 this.writeFireBase(json)
             });
         }).on('error', function (err) {
